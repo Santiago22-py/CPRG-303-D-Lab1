@@ -17,10 +17,19 @@ function App() {
     'Walk dog'
   ]);
 
+  // Function to add a new task
+  const addTask = (task) =>
+  {
+    // check for empty task
+    if (!task) return;
+    // add the new task to the list
+    setTasks([...tasks, task]);
+  }
+
   return (
     <SafeAreaView>
       <ToDoList tasks={tasks}/>
-      <ToDoForm />
+      <ToDoForm addTask={addTask}/>
     </SafeAreaView>
   );
 }
