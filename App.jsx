@@ -8,6 +8,7 @@ import React, {useState} from 'react';
 import {SafeAreaView,} from 'react-native'; //Made it a single line since there is only one import
 import ToDoList from './src/components/ToDoList';
 import ToDoForm from './src/components/ToDoForm';
+import Quote from './src/components/Quote'; // Quote component for lab 4
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
     <SafeAreaView>
       <ToDoList tasks={tasks}/>
       <ToDoForm addTask={addTask}/>
+      <Quote /> 
     </SafeAreaView>
   );
 }
